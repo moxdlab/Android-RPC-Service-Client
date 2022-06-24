@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/counterTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Counter: unknown"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/refresh_counter_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/resetCounterBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/run_single_threaded_btn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/run_single_threaded_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run Blocking"
+        app:layout_constraintEnd_toStartOf="@+id/run_multithreaded_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/resetCounterBtn"
+        app:layout_constraintTop_toTopOf="@+id/resetCounterBtn" />
+
+    <Button
+        android:id="@+id/run_multithreaded_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run parallel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/run_single_threaded_btn"
+        app:layout_constraintTop_toTopOf="@+id/run_single_threaded_btn" />
+
+    <Button
+        android:id="@+id/refresh_counter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="refresh"
+        app:layout_constraintBottom_toBottomOf="@+id/counterTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/counterTv"
+        app:layout_constraintTop_toTopOf="@+id/counterTv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
